@@ -1,0 +1,9 @@
+# Binários de testes/compilações locais
+/server
+/client
+/bot
+*.exe
+*.test
+*.out
+__pycache__/
+.DS_Store
