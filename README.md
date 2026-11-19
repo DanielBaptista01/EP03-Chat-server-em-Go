@@ -1,5 +1,7 @@
 # EP03 — Chat server em Go
 
+**Integrantes:** Daniel Santos Baptista e Isaias Maia de Oliveira
+
 Implementação da EP03 de **Paradigmas de Programação — Centro Universitário Senac**. O projeto demonstra comunicação TCP cliente-servidor e concorrência com gorrotinas e canais, por meio de um chat local com múltiplos usuários e um bot que inverte mensagens privadas.
 
 **Origem do enunciado e dos exemplos:** [EP03 no repositório do professor](https://github.com/celsocrivelaro/senac-paradigmas/tree/main/eps/ep03). Os códigos `chat_server.go` e `chat_client.go` foram estudados como referências de comunicação TCP, broadcast e gorrotinas; a implementação abaixo usa um protocolo próprio para cumprir os novos requisitos.
