@@ -2,6 +2,7 @@ package main
 
 import (
 	"bufio"
+	"errors"
 	"fmt"
 	"net"
 	"os"
@@ -58,7 +59,7 @@ func receber(conn net.Conn, terminou chan<- struct{}) {
 			}
 		}
 	}
-	if err := leitor.Err(); err != nil {
+	if err := leitor.Err(); err != nil && !errors.Is(err, net.ErrClosed) {
 		fmt.Fprintln(os.Stderr, "Conexão encerrada:", err)
 	}
 }
