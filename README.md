@@ -151,7 +151,7 @@ Para reproduzir, **não deixe um servidor já rodando na porta 4444**:
  EP03_RACE=1 python3 -m unittest discover -s tests -v
 ```
 
-> **Limites da validação:** não existe garantia absoluta de ausência de corridas ou deadlocks em toda execução possível. Os testes foram executados em ambiente Linux com Go 1.23.2; uma demonstração manual nos quatro terminais também é recomendada antes da avaliação presencial.
+> **Limites da validação:** não existe garantia absoluta de ausência de corridas ou deadlocks em toda execução possível. Os testes foram executados em ambiente Linux com Go 1.23.2; a demonstração com quatro processos independentes (servidor, dois clientes e bot), executada por script de automação, também confirmou os anúncios, mensagens públicas e privadas, inversão, renomeação e saída. Uma execução manual presencial continua recomendada antes da avaliação.
 
 ## Entrega acadêmica e atribuição
 
