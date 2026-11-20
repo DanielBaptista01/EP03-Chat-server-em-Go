@@ -162,3 +162,23 @@ Para reproduzir, **não deixe um servidor já rodando na porta 4444**:
 - [Política antiplágio](https://app.notion.com/p/Pol-tica-antipl-gio-5187d7b1ab514bfb8424ac0fcfb59dba?pvs=21)
 
 **Pendente de conferência pelo responsável pela entrega:** o conteúdo integral das duas políticas acima não pôde ser consultado durante a implementação. Houve apoio de ferramenta generativa de IA no desenvolvimento; a admissibilidade desse apoio, o dever de declaração e os critérios de autoria precisam ser conferidos nas políticas acadêmicas antes de submeter. Não se declara conformidade com essas políticas sem leitura.
+
+## Evidências de execução e validação manual (20/11/2026)
+
+A execução do projeto foi validada localmente no Windows com dois clientes, o servidor TCP em `localhost:4444` e o bot `Inversor`. Foram demonstrados: cadastro de participantes, mensagens públicas para ambos os clientes, mensagem privada direcionada, resposta automática do bot, troca de apelido e saída.
+
+No Ubuntu/WSL, a suíte `python3 -m unittest discover -s tests -v` teve **16 testes aprovados** (`OK`, 13,854 s). A mesma suíte executada com `EP03_RACE=1` também obteve **16 testes aprovados** (`OK`, 22,338 s), sem avisos de condição de corrida nos cenários cobertos. Isso não garante ausência de erros fora dos testes.
+
+As dez evidências e os comandos reproduzíveis estão descritos em [Validação manual](docs/validacao_manual.md). A apresentação [EP03 — Chat Server em Go](apresentacao_ep03.pptx) foi atualizada com 15 slides, diagramas, imagens das execuções e explicações das funcionalidades.
+
+**Contribuição:** validação manual, capturas das execuções e revisão da apresentação por Isaias Maia de Oliveira.
+
+**Melhoria identificada:** renomear para o próprio apelido atual ainda gera anúncios redundantes no servidor. O comportamento não impede os comandos principais, mas pode ser aprimorado.
+
+## Apresentação do projeto
+
+
+A apresentação da EP03 contém a explicação da arquitetura do chat TCP, o funcionamento das gorrotinas e canais, os comandos dos clientes, o bot inversor e as evidências dos testes realizados.
+- Apresentação em PDF — versão final disponível neste repositório: ./EP03_Apresentacao_Final.pdf
+- Apresentação no Canva — versão online para visualização: [LINK_DO_CANVA](https://canva.link/ioffs6ne5r32mok)
+A validação prática inclui a execução do servidor, dois clientes e do bot, além de 16 testes automatizados aprovados em execução normal e com detector de corrida.
