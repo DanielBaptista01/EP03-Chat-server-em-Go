@@ -169,7 +169,6 @@ A execução do projeto foi validada localmente no Windows com dois clientes, o 
 
 No Ubuntu/WSL, a suíte `python3 -m unittest discover -s tests -v` teve **16 testes aprovados** (`OK`, 13,854 s). A mesma suíte executada com `EP03_RACE=1` também obteve **16 testes aprovados** (`OK`, 22,338 s), sem avisos de condição de corrida nos cenários cobertos. Isso não garante ausência de erros fora dos testes.
 
-As dez evidências e os comandos reproduzíveis estão descritos em [Validação manual](docs/validacao_manual.md). A apresentação [EP03 — Chat Server em Go](apresentacao_ep03.pptx) foi atualizada com 15 slides, diagramas, imagens das execuções e explicações das funcionalidades.
 
 **Contribuição:** validação manual, capturas das execuções e revisão da apresentação por Isaias Maia de Oliveira.
 
